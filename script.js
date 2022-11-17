@@ -38,6 +38,8 @@ let teamMembers = [
 
 ]
 
+//La funzione compileCards() trova gli appositi id assegnati alle carte e assegna loro i dati corrispondenti dalle proprietà degli oggetti.
+
 function compileCards(){
 
     let cardName;
@@ -45,6 +47,10 @@ function compileCards(){
     let cardPhoto;
 
     for(i=0; i<teamMembers.length; i++){
+
+        //Ogni elemento da stilare ha un proprio id e un numero corrispondente che parte da 1 (l'array parte da indice 0, quindi prendiamo ciò in
+        //considerazione quando usiamo l'indice per trovare l'id).
+        //Assegnamo alle variabili locali l'elemento da modificare tramite id, e assegnamo poi la proprità indicata dall'oggetto.
 
         cardName = document.getElementById('idCardName' + (i+1));
         cardRole = document.getElementById('idCardRole' + (i+1));
